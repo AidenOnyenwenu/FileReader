@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>File Reader</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="scripts/script.js"></script>
+</head>
+
+<body>
+  <h1>File Reader</h1>
+  <input type="file" id="fileInput">
+  <div id="fileContent"></div>
+  <div id="errorMsg"></div>
+
+  <script>
+    var fileInput = document.getElementById("fileInput");
+    var fileContent = document.getElementById("fileContent");
+    var errorMsg = document.getElementById("errorMsg");
+
+    fileInput.addEventListener("change", function () {
+      var file = fileInput.files[0];
+      if (file.type !== "text/plain") {
+        errorMsg.innerHTML = "Please select a text file.";
+        fileContent.innerHTML = "";
+        return;
+      }
+      errorMsg.innerHTML = "";
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        fileContent.innerHTML = e.target.result;
+      };
+      reader.readAsText(file);
+    });
+  </script>
+</body>
+
+</html>
