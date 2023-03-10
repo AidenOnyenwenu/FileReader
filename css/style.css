@@ -1,0 +1,67 @@
+ /* Default styles */
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin: 30px 0;
+      font-size: 36px;
+    }
+
+    input[type="file"] {
+      padding: 10px;
+      border: 2px solid #007bff;
+      border-radius: 5px;
+      font-size: 18px;
+      margin: 30px auto;
+      display: block;
+      text-align: center;
+      background-color: #fff;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 12px;
+    }
+
+    #fileContent {
+      padding: 20px;
+      border: 2px solid white;
+      border-radius: 5px;
+      margin: 0 auto;
+      max-width: 600px;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+      font-size: 18px;
+      line-height: 1.5;
+      margin-top: 30px;
+      border-radius: 12px;
+      background-color: darkblue;
+      color: white;
+    }
+
+    #errorMsg {
+      color: red;
+      font-size: 18px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* Media query for smaller screens */
+    @media (min-width: 767px) {
+      h1 {
+        font-size: 48px;
+      }
+
+      input[type="file"] {
+        width: 60%;
+      }
+
+      #fileContent {
+        font-size: 22px;
+      }
+    }
+
