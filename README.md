@@ -1,5 +1,5 @@
 # File Reader
-📂 | This website is owned as a showcase product of https://predact.nl.
+📂 | This website is owned as a showcase product of https://predact.nl. <br>
 🧪 | This project is free-to-use,
 
 ## Instructions
